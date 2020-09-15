@@ -17,7 +17,7 @@ class App extends React.Component {
 
   componentDidMount() {
     const API_KEY = '4007110774184dce9a8ef9ec2d7c286d';
-    const URL = `http://newsapi.org/v2/everything?q=bitcoin&from=2020-08-13&sortBy=publishedAt&apiKey=${API_KEY}`;
+    //const URL = `http://newsapi.org/v2/everything?q=bitcoin&from=2020-08-13&sortBy=publishedAt&apiKey=${API_KEY}`;
     const URL_ASIDE = `http://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=${API_KEY}`;
     axios.get(URL_ASIDE).then((response) => {
       const allResponse = response.data.articles;
@@ -57,7 +57,8 @@ class App extends React.Component {
           <News items={this.state.newsData} />
           <Aside items={this.state.newsData} />
         </div>
-        <div>
+
+        <div className="card-footer mt-4 pt-4">
           <Footer />
         </div>
       </div>

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-//import NewSingle from '../News/NewSingle';
 import NewsAside from '../News/NewsAside';
 
 class Aside extends Component {
@@ -12,7 +11,14 @@ class Aside extends Component {
     return items.map((item) => <NewsAside item={item} />);
   };
   render() {
-    return <div className="col-md-3">{this.renderItems(this.props.items)}</div>;
+    return (
+      <div className="col-md-3 mt-4">
+        <div>
+          <h2>Other News</h2>
+        </div>
+        {this.renderItems(this.props.items)}
+      </div>
+    );
   }
 }
 
