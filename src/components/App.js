@@ -19,20 +19,20 @@ class App extends React.Component {
     const API_KEY = '4007110774184dce9a8ef9ec2d7c286d';
     const URL = `http://newsapi.org/v2/everything?q=bitcoin&from=2020-08-13&sortBy=publishedAt&apiKey=${API_KEY}`;
     const URL_ASIDE = `http://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=${API_KEY}`;
-    axios.get(URL).then((response) => {
+    axios.get(URL_ASIDE).then((response) => {
       const allResponse = response.data.articles;
       console.log(allResponse);
       this.setState({
         newsData: allResponse,
       });
     });
-    axios.get(URL_ASIDE).then((response) => {
-      const allResponse = response.data.articles;
-      console.log(allResponse);
-      this.setState({
-        asideData: allResponse,
-      });
-    });
+    //    axios.get(URL_ASIDE).then((response) => {
+    //  const allResponse = response.data.articles;
+    //  console.log(allResponse);
+    //  this.setState({
+    //    asideData: allResponse,
+    //  });
+    //});
   }
 
   render() {
@@ -49,13 +49,13 @@ class App extends React.Component {
                 alt=""
                 loading="lazy"
               />
-              Bootstrap
+              News Portal
             </a>
           </nav>
         </div>
         <div className="container-fluid row">
           <News items={this.state.newsData} />
-          <Aside items={this.state.asideData} />
+          <Aside items={this.state.newsData} />
         </div>
         <div>
           <Footer />
