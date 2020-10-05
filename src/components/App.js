@@ -39,18 +39,18 @@ class App extends React.Component {
     return (
       <div className="App mb-4">
         <div>
-          <nav class="navbar navbar-light bg-light">
-            <a class="navbar-brand" href="#">
+          <nav className="navbar navbar-light bg-light">
+            <a className="navbar-brand" href="#">
               <img
                 src="https://getbootstrap.com/docs/4.5/assets/brand/bootstrap-solid.svg"
                 width="30"
                 height="30"
-                class="d-inline-block align-top"
+                className="d-inline-block align-top"
                 alt=""
                 loading="lazy"
               />
-              News Portal
             </a>
+            <span>React News Portal</span>
           </nav>
         </div>
         <div className="container-fluid row">
