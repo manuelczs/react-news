@@ -3,8 +3,7 @@ import './App.css';
 import News from './News/News';
 import Footer from './Footer/Footer';
 import Aside from './Aside';
-
-import axios from 'axios';
+import MyApiClient from '../client';
 
 class App extends React.Component {
   constructor() {
@@ -16,23 +15,11 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    const API_KEY = '4007110774184dce9a8ef9ec2d7c286d';
-    //const URL = `http://newsapi.org/v2/everything?q=bitcoin&from=2020-08-13&sortBy=publishedAt&apiKey=${API_KEY}`;
-    const URL_ASIDE = `http://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=${API_KEY}`;
-    axios.get(URL_ASIDE).then((response) => {
-      const allResponse = response.data.articles;
-      console.log(allResponse);
+    MyApiClient.get('Axios client').then((res) => {
       this.setState({
-        newsData: allResponse,
+        newsData: [],
       });
     });
-    //    axios.get(URL_ASIDE).then((response) => {
-    //  const allResponse = response.data.articles;
-    //  console.log(allResponse);
-    //  this.setState({
-    //    asideData: allResponse,
-    //  });
-    //});
   }
 
   render() {
