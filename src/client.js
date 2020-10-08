@@ -8,7 +8,6 @@ const URL_ASIDE = `http://newsapi.org/v2/top-headlines?country=us&category=busin
 const MyApiClient = axios.create({
   baseURL: URL_ASIDE,
   timeout: 1000,
-  headers: { 'X-Custom-Header': 'foobar' },
 });
 
 export default MyApiClient;
