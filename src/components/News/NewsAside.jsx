@@ -6,7 +6,11 @@ class NewsAside extends Component {
       <>
         <div className="mt-4 mr-2 ml-2 text-justify">
           <p className="">
-            <a href={this.props.item.url} style={{ textDecoration: 'none' }}>
+            <a
+              href={this.props.item.url}
+              style={{ textDecoration: 'none' }}
+              target="blank"
+            >
               {this.props.item.title}
             </a>
           </p>
