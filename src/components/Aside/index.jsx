@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import NewsAside from '../News/NewsAside';
+import '@fortawesome/fontawesome-free/js/all.js';
 
 class Aside extends Component {
   constructor() {
