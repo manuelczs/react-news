@@ -24,7 +24,7 @@ class App extends React.Component {
       this.setState({
         newsData: allResponse,
       });
-      console.log(newsData);
+      console.log(this.state.newsData);
     });
 
     axios.get(URL).then((response) => {
@@ -32,7 +32,7 @@ class App extends React.Component {
       this.setState({
         asideData: res,
       });
-      console.log(asideData);
+      console.log(this.state.asideData);
     });
   }
 
