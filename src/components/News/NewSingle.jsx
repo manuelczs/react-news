@@ -19,7 +19,10 @@ class NewSingle extends React.Component {
 
   render() {
     return (
-      <div className="card mt-4 mr-3 ml-3" style={{ width: '18rem' }}>
+      <div
+        className="card card-styles mt-4 mr-3 ml-3"
+        style={{ width: '18rem' }}
+      >
         <img src={this.props.item.urlToImage} className="card-img-top" alt="" />
         <div className="card-body">
           <h5 className="card-title">{this.props.item.title}</h5>
@@ -27,11 +30,11 @@ class NewSingle extends React.Component {
         <button
           onClick={this.openModal}
           type="button"
-          class="btn btn-primary"
+          class="btn-styles"
           data-toggle="modal"
           data-target=".bd-example-modal-lg"
         >
-          View
+          Full View
         </button>
       </div>
     );

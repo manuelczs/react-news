@@ -40,7 +40,7 @@ class App extends React.Component {
     return (
       <div className="App mb-4">
         <div>
-          <nav className="navbar navbar-light bg-light">
+          <nav className="navbar navbar-light bg-info">
             <a className="navbar-brand" href="/">
               <i className="fas fa-rss-square"></i>
             </a>
@@ -52,7 +52,7 @@ class App extends React.Component {
           <Aside items={this.state.asideData} />
         </div>
 
-        <div className="card-footer mt-4 pt-4">
+        <div className="card-footer mt-4 pt-4 bg-info">
           <Footer />
         </div>
       </div>
