@@ -38,13 +38,16 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App mb-4">
-        <div>
-          <nav className="navbar navbar-light bg-info">
+      <div className="App">
+        <div className="app-styles">
+          <nav className="navbar">
             <a className="navbar-brand" href="/">
-              <i className="fas fa-rss-square"></i>
+              <i className="fas fa-rss-square fas-styles"></i>
+              <span className="news-portal">React News Portal</span>
+              <span className="news-portal">
+                <small className="">A simple app using Axios</small>
+              </span>
             </a>
-            <span>React News Portal</span>
           </nav>
         </div>
         <div className="container-fluid row">
@@ -52,7 +55,7 @@ class App extends React.Component {
           <Aside items={this.state.asideData} />
         </div>
 
-        <div className="card-footer mt-4 pt-4 bg-info">
+        <div className="card-footer mt-4 pt-4">
           <Footer />
         </div>
       </div>
