@@ -15,24 +15,11 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    const API_KEY = '4007110774184dce9a8ef9ec2d7c286d';
-    const URL = `https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=${API_KEY}`;
-    const URL_ASIDE = `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=${API_KEY}`;
-
-    axios.get(URL_ASIDE).then((response) => {
-      const allResponse = response.data.articles;
+    axios.get('https://manux.ar/apinews').then((response) => {
+      console.log(response.articles);
       this.setState({
-        newsData: allResponse,
+        newsData: response.articles,
       });
-      console.log(this.state.newsData);
-    });
-
-    axios.get(URL).then((response) => {
-      const res = response.data.articles;
-      this.setState({
-        asideData: res,
-      });
-      console.log(this.state.asideData);
     });
   }
 
