@@ -19,6 +19,7 @@ class App extends React.Component {
       console.log(response.articles);
       this.setState({
         newsData: response.articles,
+        asideData: response.articles,
       });
     });
   }
