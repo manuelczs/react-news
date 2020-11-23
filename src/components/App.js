@@ -16,10 +16,9 @@ class App extends React.Component {
 
   componentDidMount() {
     axios.get('https://manux.ar/apinews').then((response) => {
-      console.log(response.articles);
       this.setState({
-        newsData: response.articles,
-        asideData: response.articles,
+        newsData: response.data.articles,
+        asideData: response.data.articles,
       });
     });
   }
