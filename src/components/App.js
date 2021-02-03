@@ -15,9 +15,13 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('https://manux.ar/apinews').then((response) => {
+    axios.get('http://manux.ar:3002/news1').then((response) => {
       this.setState({
         newsData: response.data.articles,
+      });
+    });
+    axios.get('http://manux.ar:3002/news2').then((response) => {
+      this.setState({
         asideData: response.data.articles,
       });
     });
