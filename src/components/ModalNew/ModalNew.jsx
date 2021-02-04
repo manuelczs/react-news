@@ -5,38 +5,42 @@ class ModalNew extends Component {
     return (
       <>
         <div
-          class="modal fade bd-example-modal-lg"
-          tabindex="-1"
+          className="modal fade bd-example-modal-lg"
+          tabIndex="-1"
           role="dialog"
           aria-labelledby="myLargeModalLabel"
           aria-hidden="true"
         >
-          <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">
+          <div className="modal-dialog modal-lg">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h5 className="modal-title" id="exampleModalLabel">
                   {this.props.title}
                 </h5>
                 <button
                   type="button"
-                  class="close"
+                  className="close"
                   data-dismiss="modal"
                   aria-label="Close"
                 >
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
-              <div class="modal-body">
+              <div className="modal-body">
                 <div>
-                  <img className="img-fluid" src={this.props.urlToImage} />
+                  <img
+                    className="img-fluid"
+                    src={this.props.urlToImage}
+                    alt={this.props.urlToImage}
+                  />
                 </div>
                 <div>{this.props.description}</div>
               </div>
-              <div class="modal-footer">
+              <div className="modal-footer">
                 <p className="">Author: {this.props.author}</p>
                 <button
                   type="button"
-                  class="btn btn-secondary"
+                  className="btn btn-secondary"
                   data-dismiss="modal"
                 >
                   Close

@@ -30,7 +30,7 @@ class NewSingle extends React.Component {
         <button
           onClick={this.openModal}
           type="button"
-          class="btn-styles"
+          className="btn-styles"
           data-toggle="modal"
           data-target=".bd-example-modal-lg"
         >

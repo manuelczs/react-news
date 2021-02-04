@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import NewsAside from '../News/NewsAside';
 import '@fortawesome/fontawesome-free/js/all.js';
+import uuid from 'react-uuid';
 
 class Aside extends Component {
   constructor() {
@@ -9,7 +10,7 @@ class Aside extends Component {
   }
 
   renderItems = (items) => {
-    return items.map((item) => <NewsAside item={item} />);
+    return items.map((item) => <NewsAside item={item} key={uuid()} />);
   };
   render() {
     return (

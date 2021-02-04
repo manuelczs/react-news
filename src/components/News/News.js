@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import NewSingle from './NewSingle';
 import ModalNew from '../ModalNew/ModalNew';
+import uuid from 'react-uuid';
 
 class News extends Component {
   constructor() {
@@ -22,7 +23,7 @@ class News extends Component {
 
   renderItems = (items) => {
     return items.map((item) => (
-      <NewSingle item={item} openModal={this.openModal} />
+      <NewSingle item={item} openModal={this.openModal} key={uuid()} />
     ));
   };
 
