@@ -39,7 +39,7 @@ class App extends React.Component {
         </div>
         <div className="container-fluid row">
           <News items={this.state.news1} />
-          <Aside items={this.state.news2} />}
+          <Aside items={this.state.news2} />
         </div>
 
         <div className="card-footer mt-4 pt-4">
