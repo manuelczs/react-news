@@ -5,36 +5,22 @@ import Footer from './Footer/Footer';
 import Aside from './Aside';
 import axios from 'axios';
 
-const API_KEY = '4007110774184dce9a8ef9ec2d7c286d';
-
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      newsData: [],
-      asideData: [],
+      news1: [],
+      news2: [],
     };
   }
 
   componentDidMount() {
-    axios
-      .get(
-        `https://newsapi.org/v2/everything?q=tesla&from=2021-01-03&sortBy=publishedAt&apiKey=${API_KEY}`
-      )
-      .then((response) => {
-        this.setState({
-          newsData: response.data.articles,
-        });
+    axios.get('https://manux.ar/apinews').then((response) => {
+      this.setState({
+        news1: response.data.news1.articles,
+        news2: response.data.news2.articles,
       });
-    axios
-      .get(
-        `https://newsapi.org/v2/everything?q=apple&from=2021-02-02&to=2021-02-02&sortBy=popularity&apiKey=${API_KEY}`
-      )
-      .then((response) => {
-        this.setState({
-          asideData: response.data.articles,
-        });
-      });
+    });
   }
 
   render() {
@@ -52,8 +38,8 @@ class App extends React.Component {
           </nav>
         </div>
         <div className="container-fluid row">
-          <News items={this.state.newsData} />
-          <Aside items={this.state.asideData} />
+          <News items={this.state.news1} />
+          <Aside items={this.state.news2} />}
         </div>
 
         <div className="card-footer mt-4 pt-4">
