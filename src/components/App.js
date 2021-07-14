@@ -7,7 +7,6 @@ import axios from 'axios';
 
 class App extends React.Component {
   constructor() {
-    super();
     this.state = {
       news1: [],
       news2: [],
@@ -15,7 +14,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('https://manux.ar/apinews').then((response) => {
+    axios.get('http://localhost:3000').then((response) => {
       this.setState({
         news1: response.data.news1.articles,
         news2: response.data.news2.articles,
