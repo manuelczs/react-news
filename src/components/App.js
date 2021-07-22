@@ -6,7 +6,8 @@ import Aside from './Aside';
 import axios from 'axios';
 
 class App extends React.Component {
-  constructor() {
+  constructor(props) {
+    super(props);
     this.state = {
       news1: [],
       news2: [],
@@ -14,7 +15,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:3000').then((response) => {
+    axios.get('http://localhost:4000/api').then((response) => {
       this.setState({
         news1: response.data.news1.articles,
         news2: response.data.news2.articles,
