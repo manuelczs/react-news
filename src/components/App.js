@@ -15,7 +15,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:4000/api').then((response) => {
+    axios.get(`http://localhost:${3001}/api`).then((response) => {
       this.setState({
         news1: response.data.news1.articles,
         news2: response.data.news2.articles,
